@@ -33,5 +33,6 @@ WrongCat::~WrongCat()
 
 void WrongCat::makeSound() const
 {
+	// This won't be called via WrongAnimal* because makeSound is not virtual.
 	std::cout << "WrongCat makes a sound" << std::endl;
 }

@@ -17,6 +17,7 @@
 // -----------------------------------------------------
 Cat::Cat() : Animal()
 {
+    // Set the runtime type to "Cat" for identification.
     type = "Cat";
     std::cout << "Cat default constructor called" << std::endl;
 }
@@ -28,6 +29,7 @@ Cat::Cat(const Cat& other) : Animal(other)
 
 Cat& Cat::operator=(const Cat& other)
 {
+    // Copy the base Animal part.
     if (this != &other)
         Animal::operator=(other); // call base class assignment operator         
     std::cout << "Cat assignment operator called" << std::endl;     
@@ -43,5 +45,6 @@ Cat::~Cat()
 
 void Cat::makeSound() const
 {
+    // Cat-specific sound.
     std::cout << "Meow! Meow!" << std::endl;
 }

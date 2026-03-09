@@ -32,6 +32,7 @@ WrongAnimal::~WrongAnimal()
 
 void WrongAnimal::makeSound() const
 {
+	// Base behavior (non-virtual in WrongAnimal).
 	std::cout << "WrongAnimal makes a generic sound" << std::endl;
 }
 

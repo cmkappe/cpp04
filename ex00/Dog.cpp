@@ -6,7 +6,7 @@
 /*   By: ckappe <ckappe@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/09 20:10:33 by ckappe            #+#    #+#             */
-/*   Updated: 2026/03/09 20:14:47 by ckappe           ###   ########.fr       */
+/*   Updated: 2026/03/09 22:30:37 by ckappe           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 // -----------------------------------------------------
 Dog::Dog() : Animal()
 {
+    // Set the runtime type to "Dog" for identification
     type = "Dog";
     std::cout << "Dog default constructor called" << std::endl;
 }
@@ -28,6 +29,7 @@ Dog::Dog(const Dog& other) : Animal(other)
 
 Dog& Dog::operator=(const Dog& other)
 {
+    // Copy the base Animal part
     if (this != &other)
     {
         Animal::operator=(other);
@@ -46,5 +48,6 @@ Dog::~Dog()
 
 void Dog::makeSound() const
 {
+    // Dog-specific sound
     std::cout << "Woof! Woof!" << std::endl;
 }

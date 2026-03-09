@@ -18,6 +18,7 @@
 
 int main()
 {
+    // Basic polymorphism: base pointers to derived objects call the correct sound.
     std::cout << "--- Basic polymorphism test ---" << std::endl;
     const Animal* meta = new Animal();
     const Animal* j = new Dog();
@@ -34,6 +35,7 @@ int main()
     delete j;
     delete i;
 
+    // Array of base pointers storing Dogs and Cats.
     std::cout << "\n--- Array of Animals test ---" << std::endl;
     const Animal* animals[4];
     animals[0] = new Dog();
@@ -49,6 +51,7 @@ int main()
     for (int idx = 0; idx < 4; ++idx)
         delete animals[idx];
 
+    // Copy/assignment on derived types (uses base class operator= too).
     std::cout << "\n--- Copy and assignment test ---" << std::endl;
     Dog originalDog;
     Dog copiedDog(originalDog);
@@ -65,6 +68,7 @@ int main()
     std::cout << "Assigned Cat: ";
     assignedCat.makeSound();
 
+    // WrongAnimal lacks virtual functions, so polymorphism does not work.
     std::cout << "\n--- Wrong polymorphism test ---" << std::endl;
     const WrongAnimal* wrongMeta = new WrongAnimal();
     const WrongAnimal* wrongCat = new WrongCat();
