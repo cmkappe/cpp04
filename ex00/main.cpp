@@ -6,15 +6,15 @@
 /*   By: ckappe <ckappe@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/09 20:10:38 by ckappe            #+#    #+#             */
-/*   Updated: 2026/03/09 20:22:07 by ckappe           ###   ########.fr       */
+/*   Updated: 2026/03/09 20:39:44 by ckappe           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Animal.hpp"
 #include "Dog.hpp"
 #include "Cat.hpp"
-// #include "WrongAnimal.hpp"
-// #include "WrongCat.hpp"
+#include "WrongAnimal.hpp"
+#include "WrongCat.hpp"
 
 int main()
 {
@@ -65,7 +65,7 @@ int main()
     std::cout << "Assigned Cat: ";
     assignedCat.makeSound();
 
-/*     std::cout << "\n--- Wrong polymorphism test ---" << std::endl;
+    std::cout << "\n--- Wrong polymorphism test ---" << std::endl;
     const WrongAnimal* wrongMeta = new WrongAnimal();
     const WrongAnimal* wrongCat = new WrongCat();
 
@@ -76,7 +76,7 @@ int main()
     wrongMeta->makeSound();
 
     delete wrongMeta;
-    delete wrongCat; */
+    delete wrongCat;
 
     return 0;
 }
