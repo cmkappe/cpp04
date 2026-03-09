@@ -17,7 +17,8 @@ class Animal
 
         Animal& operator=(const Animal& other);
 
-        // Virtual so derived classes (Dog/Cat) can provide their own sound
-        virtual void makeSound() const;
+        // Pure virtual: Animal is abstract and cannot be instantiated.
+        // Derived classes must implement their own sound.
+        virtual void makeSound() const = 0;
         std::string getType() const;
 };

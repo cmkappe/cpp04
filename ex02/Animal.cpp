@@ -6,7 +6,7 @@
 /*   By: ckappe <ckappe@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/09 20:10:27 by ckappe            #+#    #+#             */
-/*   Updated: 2026/03/09 20:11:32 by ckappe           ###   ########.fr       */
+/*   Updated: 2026/03/09 22:38:18 by ckappe           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,12 +38,6 @@ Animal::~Animal()
 // -----------------------------------------------------
 // *** MEMBER FUNCTIONS ***
 // -----------------------------------------------------
-
-void Animal::makeSound() const
-{
-    // Default behavior for base class.
-    std::cout << "Animal makes a generic sound" << std::endl;
-}
 
 std::string Animal::getType() const
 {
