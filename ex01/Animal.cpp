@@ -41,6 +41,7 @@ Animal::~Animal()
 
 void Animal::makeSound() const
 {
+    // Default behavior for base class.
     std::cout << "Animal makes a generic sound" << std::endl;
 }
 

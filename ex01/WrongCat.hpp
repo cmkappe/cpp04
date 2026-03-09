@@ -11,5 +11,7 @@ class WrongCat : public WrongAnimal
 
 		WrongCat& operator=(const WrongCat& other);
 
+		// This hides WrongAnimal::makeSound, but without virtual it won't be used
+		// when accessed through a WrongAnimal*.
 		void makeSound() const;
 };
